@@ -1,27 +1,30 @@
 package de.htw.testrepo.sharknetchat.Interfaces;
 
+import net.sharkfw.knowledgeBase.PeerSemanticTag;
+
 import java.util.List;
 
 /**
+ * SharknetChat
  * Created by René on 28.01.2016.
  */
 public interface SharkNetChatroom {
 
-    void addPeerToConversation(SharkNetPeer peer) throws IllegalAccessException;
+    void addPeerToConversation(PeerSemanticTag peer) throws IllegalAccessException;
 
-    void removePeerFromConversation(SharkNetPeer peer);
+    void removePeerFromConversation(PeerSemanticTag peer);
 
-    void grantAdminPermissionsToPeer(SharkNetPeer peer);
+    void grantAdminPermissionsToPeer(PeerSemanticTag peer);
 
-    void removeAdminPermissionsToPeer(SharkNetPeer peer);
+    void removeAdminPermissionsToPeer(PeerSemanticTag peer);
 
-    void setNewOwner(SharkNetPeer peer);
+    void setNewOwner(PeerSemanticTag peer);
 
-    SharkNetPeer getOwnerOfRoom();
+    PeerSemanticTag getOwnerOfRoom();
 
-    List<SharkNetPeer> getAdmins();
+    List<PeerSemanticTag> getAdmins();
 
-    List<SharkNetPeer> getPeers();
+    List<PeerSemanticTag> getPeers();
 
     byte getChatProtocolOfChatroom();
 }

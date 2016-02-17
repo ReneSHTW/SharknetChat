@@ -1,13 +1,16 @@
 package de.htw.testrepo.sharknetchat.Interfaces;
 
+import net.sharkfw.knowledgeBase.PeerSemanticTag;
+
 import java.util.List;
 
 /**
+ * SharknetChat
  * Created by René on 28.01.2016.
  */
 public interface SharkNetChatAPI {
 
-    void sendMessage(SharkNetPeer peer, byte message);
+    void sendMessage(PeerSemanticTag peer, byte message);
 
     void sendMessage(SharkNetChatroom room, byte message);
 
@@ -21,13 +24,13 @@ public interface SharkNetChatAPI {
 
     //byte getConversationOfChatroom(SharkNetChatroom room);
 
-    byte getConversationWithPeer(SharkNetPeer peer);
+    byte getConversationWithPeer(PeerSemanticTag peer);
 
     List<SharkNetChatroom> getOwnChatrooms();
 
     List<SharkNetChatroom> getAllChatrooms();
 
-    List<SharkNetPeer> getAvailablePeers();
+    List<PeerSemanticTag> getAvailablePeers();
 
     //void onMessagedReceived(SharkNetPeer peer, byte message);
 
