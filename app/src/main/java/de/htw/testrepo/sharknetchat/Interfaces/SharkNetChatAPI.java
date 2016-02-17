@@ -16,9 +16,9 @@ public interface SharkNetChatAPI {
 
     //MessageClass erstellen
 
-    void createChatroom(String roomName); //Eindeutigkeit erschaffen //TopicTag
+    void createChatroom(String chatroomName); //Eindeutigkeit erschaffen //TopicTag
 
-    //cloneChatroom
+    void cloneChatroom(String chatroomName, PeerSemanticTag owner);
 
     //DeleteMessage
 
@@ -34,7 +34,7 @@ public interface SharkNetChatAPI {
 
     //void onMessagedReceived(SharkNetPeer peer, byte message);
 
-   // void onMessagedReceived(SharkNetChatroom room ,SharkNetPeer peer, byte message);
+    //void onMessagedReceived(SharkNetChatroom room ,SharkNetPeer peer, byte message);
 
     //setListener
 }
